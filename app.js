@@ -45,7 +45,7 @@ new Vue({
       }
       this.turns.unshift({
         isPlayer: true,
-        text: `Player hits Monster hard for ${damage}`,
+        text: 'Player heals for 10',
       })
       this.monsterAttacks()
     },
@@ -57,8 +57,8 @@ new Vue({
       this.playerHealth -= damage
       this.checkWin()
       this.turns.unshift({
-        isPlayer: true,
-        text: 'Player heals for 10',
+        isPlayer: false,
+        text: `Monster hits Player for ${damage}`,
       })
     },
     calculateDamage(min, max) {
